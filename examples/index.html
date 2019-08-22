@@ -90,11 +90,9 @@
 
             var levelControl = new L.Control.Level({
                 level: "0",
-                levels: indoorLayer.getLevels()
+                levels: indoorLayer.getLevels(),
+                indoorLayer: indoorLayer
             });
-
-            // Connect the level control to the indoor layer
-            levelControl.addEventListener("levelchange", indoorLayer.setLevel, indoorLayer);
 
             levelControl.addTo(map);
         });
